@@ -44,5 +44,10 @@ const firebaseConfig = {
   })
 
   botonsalir.addEventListener("click",function(){
-    alert("estas saliendo")
+    
+    signOut(auth).then(()=>{
+        avatar.classList.add("invisible")
+        window.location.href="./views/login.html"
+    })
+
   })
